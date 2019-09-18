@@ -3,7 +3,6 @@ const url = require('url');
 
 function handler(req, res) {
   const parsedUrl = url.parse(req.url, true);
-  console.log(parsedUrl.pathname);
   if (parsedUrl.pathname === '/') {
     res.writeHead(200, { 'Content-type': 'text/html' });
     res.write('I am web server');
